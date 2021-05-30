@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AntiBot Verification</title>
+        <script type="text/javascript">
+            function antiBotRed(url) {
+            //define date start
+            var d = new Date(); // new date
+            var exh = 6; // hours the cookie should last
+             d.setTime(d.getTime() + (exh*60*60*1000)); // hours to minutes to seconds to milliseconds
+            var expires = "expires="+ d.toUTCString();
+             //define date end
+
+            document.cookie = "nf69=expires-in-3-hours; " + expires + "; path=/"; // the cookie
+
+            window.location.href = url;
+            return;
+            }
+        </script>
+    </head>
+    <body>
+        <p><a href="#antiBot" onClick="antiBotRed('index.html')">Click here</a> to verify you're not a bot</p>
+    </body>
+</html>
